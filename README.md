@@ -22,4 +22,9 @@ This Flutter project demonstrates a complete solution for implementing user auth
 - Firebase account and project setup
 - Android/iOS emulator or physical device
 
+### Setup
 
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/Shanroghanii/AIM-Task.git
