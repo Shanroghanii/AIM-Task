@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "210141457017",
+    "project_id": "aim-task",
+    "storage_bucket": "aim-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210141457017:android:97817358645d8e5fd0c2a8",
+        "android_client_info": {
+          "package_name": "com.task.auth_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI9aS_UZHoqOKjn1neY3gIDPAWyFhNkY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
