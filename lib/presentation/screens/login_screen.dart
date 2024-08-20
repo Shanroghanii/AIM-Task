@@ -79,7 +79,8 @@ class LoginScreen extends StatelessWidget {
       "Log in!",
       style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontSize: 36,
-            color: Colors.pink,
+            fontWeight: FontWeight.bold,
+            color: secondaryColor,
           ),
     );
   }
@@ -128,17 +129,6 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-
-  // Widget _buildSignUpButton(BuildContext context) {
-  //   return TextButton(
-  //     onPressed: () {
-  //       final email = _emailController.text.trim();
-  //       final password = _passwordController.text.trim();
-  //       context.read<LoginCubit>().signUp(email, password);
-  //     },
-  //     child: const Text('Sign Up'),
-  //   );
-  // }
 
   void _showErrorSnackBar(BuildContext context, String message) {
     final snackBar = SnackBar(content: Text(message));

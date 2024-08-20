@@ -14,16 +14,16 @@ class LoginCubit extends Cubit<LoginState> {
     if (_validateFields(email, password)) {
       emit(LoginLoading());
       try {
-        final user = await authRepository.signInWithEmailAndPassword(email, password);
-     print("object");
+        final user =
+            await authRepository.signInWithEmailAndPassword(email, password);
         if (user != null) {
           emit(LoginSuccess());
         }
       } on FirebaseAuthException catch (e) {
-        print("eeeeeee ${e.code}");
         if (e.code == 'user-not-found') {
           try {
-            final newUser = await authRepository.signUpWithEmailAndPassword(email, password);
+            final newUser = await authRepository.signUpWithEmailAndPassword(
+                email, password);
             if (newUser != null) {
               emit(LoginSuccess());
             } else {
@@ -33,10 +33,9 @@ class LoginCubit extends Cubit<LoginState> {
             emit(LoginFailure(signUpError.toString()));
           }
         } else {
-          emit(LoginFailure(e.message ?? 'Unknown error'));
+          emit(const LoginFailure('Invalid password'));
         }
       }
-
     } else {
       emit(const LoginInvalidFields('Invalid email', 'Invalid password'));
     }
